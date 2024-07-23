@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            background-color: #000; /* Black color */
+            color: #fff; /* White text */
+            height: 100vh; /* Full height */
+            position: fixed; /* Fixed position */
+        }
+        .sidebar .nav-link {
+            color: #fff; /* White text */
+        }
+        .sidebar .nav-link.active {
+            background-color: #444; /* Darker shade for active link */
+        }
+        .main-content {
+            margin-left: 220px; /* Adjust margin to avoid overlap with sidebar */
+            padding: 20px;
+        }
+        .form-group label {
+            font-weight: bold; /* Make labels bold */
+        }
+        .btn-primary {
+            background-color: #007bff; /* Primary blue */
+            border-color: #007bff; /* Primary blue */
+        }
+        .btn-primary:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        .btn-secondary {
+            background-color: #6c757d; /* Secondary gray */
+            border-color: #6c757d; /* Secondary gray */
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268; /* Darker gray on hover */
+        }
+        .border {
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Add shadow */
+        }
+        footer {
+            background-color: #007bff; /* Bootstrap's primary blue color */
+            color: #fff; /* White text */
+            padding: 10px 0; /* Add some padding */
+            text-align: center; /* Center text */
+            position: fixed; /* Fixed position */
+            bottom: 0; /* At the bottom of the page */
+            width: 100%; /* Full width */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="col-md-2 d-none d-md-block sidebar">
+        <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{ url_for('emp_dashboard') }}">
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('add_post') }}">
+                        Add Post
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('applied') }}">
+                        Applications
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('logout') }}">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container main-content">
+        <div class="border p-4">
+            <h2 class="text-center mb-4">Edit Job Post</h2>
+            <form action="{{ url_for('edit_post', ID=row[0]) }}" method="post">
+                <div class="form-group">
+                    <label for="title">Job Title:</label>
+                    <input type="text" class="form-control" name="title" id="title" value="{{ row[2] }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="desc">Description:</label>
+                    <textarea class="form-control" name="desc" id="desc" rows="5" required>{{ row[3] }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="req">Requirements:</label>
+                    <textarea class="form-control" name="req" id="req" rows="5" required>{{ row[4] }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="loc">Location:</label>
+                    <input type="text" class="form-control" id="loc" name="loc" value="{{ row[5] }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="industry">Industry:</label>
+                    <input type="text" class="form-control" id="industry" name="industry" value="{{ row[6] }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type:</label>
+                    <select class="form-control" name="type" id="type">
+                        <option value="Full-time" {% if row[7] == 'Full-time' %}selected{% endif %}>Full-time</option>
+                        <option value="Part-time" {% if row[7] == 'Part-time' %}selected{% endif %}>Part-time</option>
+                        <option value="Contract" {% if row[7] == 'Contract' %}selected{% endif %}>Contract</option>
+                        <option value="Internship" {% if row[7] == 'Internship' %}selected{% endif %}>Internship</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Update Post</button>
+                <a href="{{ url_for('emp_dashboard') }}" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Job Board. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
