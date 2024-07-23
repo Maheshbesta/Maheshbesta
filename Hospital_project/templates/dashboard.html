@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    /* background-color: #333; */
+    background-color: #2FA5EB;
+    color: white;
+    padding: 10px 0;
+}
+
+.navtab {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navtab th {
+    text-align: left;
+    padding: 0 20px;
+}
+
+.navtab a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 20px;
+}
+
+.navtab a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+navtab th {
+    /* background-color: #333; */
+    background-color: #2FA5EB;
+    color: white;
+}
+black th{
+    background-color: #333;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.a {
+    color: brown;
+}
+.a:hover{
+    color: green;
+}
+
+    </style>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+</head>
+<body>
+    <nav>
+        <table class="navtab">
+            <tr>
+                <th>
+        <text style="font-family: forte;font-size: 50px;"><span>SUPER</span>&nbsp;
+            Hospital</text></td>
+        <th style="vertical-align: bottom;">
+            <a href="{{url_for('index')}}">HOME</a>
+            <a href="{{url_for('about')}}">ABOUT US</a>
+            <a href="{{url_for('service')}}">SERVICE</a>
+            <a href="{{url_for('doctors')}}">DOCTORS</a>
+            <a href="{{url_for('contact')}}">CONTACT US</a>
+            <a href="{{url_for('appointment')}}">DASHBOARD</a></td>
+    </tr>
+    </table>
+    
+    </nav>
+
+
+        <table class="black">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Gender</th>
+                    <th>Appintment date</th>
+                    <th>Description</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    <td>{{ row[0] }}</td> 
+                    <td>{{ row[1]  }}</td> 
+                    <td>{{ row[2]  }}</td>
+                    <td>{{ row[3]  }}</td> 
+                    <td>{{row[4] }}</td>
+                    <td>{{row[5] }}</td>
+                    <td>{{row[6] }}</td>
+                    <td>{{row[7] }}</td>
+                    <td><a href="{{ url_for('update', id=row[0]) }}">Edit</a></td> <!-- Assuming story[1] is the Story ID -->
+                    <td><a href="{{ url_for('delete', id=row[0]) }}">Delete</a></td> <!-- Assuming story[1] is the Story ID -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <p class="p">
+            click on link to redirect to home page  <a href="{{url_for('index')}}" class="a">Home_Page</a>
+         </p>
+    
+</body>
+</html>

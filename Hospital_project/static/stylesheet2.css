@@ -1,0 +1,301 @@
+/* first heading */
+.div1{
+    background-color: #2fa5eb;   
+    padding: 0.5px;
+}
+/* text for heading */
+h3{
+    color: white;
+    margin-left: 860px;
+}
+/* belongs to nav bar */
+.tab1{
+    width: 100%;
+    border-spacing: 0px;     
+     position:-webkit-sticky;
+     position: sticky;
+     top: 0;
+     z-index: 1;   
+     border-bottom:1px solid rgb(230, 226, 226);
+    }
+    /* belongs to nav bar */
+nav{
+    margin-left: 170px;  
+}
+/* belongs to nav bar */
+span{
+    color: #2fa5eb;
+} 
+ /* super hosp    */
+ p{
+    font-size: 35px;
+    font-style: italic;
+    margin-left: 150px;
+} 
+/* anchor prop */
+a:link{
+    text-decoration: none;
+    color: grey;
+    margin-left: 20px;
+    font-size: 20px;
+}
+a:hover{
+    color: crimson;
+    text-decoration: underline;
+}
+/* img block */
+.div2{
+    border-bottom:1px solid rgb(230, 226, 226);
+    background:url(hosp_pics/homepg.png);
+   height: 400px;
+   margin-left: 90px;
+   margin-right: 90px;
+}
+/* inside img block */
+.d2{
+    border:1px solid rgb(218,216,216);
+    background-color: black;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 320px;
+    opacity:0.2;
+}
+.d{
+    border-bottom:  solid rgb(230, 226, 226);
+}
+/* inside img block */
+h4{
+    position: relative;
+    bottom: -50px;
+    color: white;
+    font-size: 55px;
+}
+/* inside img block */
+.p4{
+    position: relative;   
+    color: white;
+    font-size: 30px;
+    font-weight: 900px;
+    margin-left: 0%;
+    font-style: normal;
+}
+/* afterimg */
+.div3{
+    width: 100%;
+    border-bottom:1px solid rgb(230, 226, 226);
+}
+/* align of afterimg div */
+.div4{  
+    margin-right: 500px;
+    margin-left: 85px;  
+    margin-bottom: 15px;
+}
+/* text of afterimg div */
+.p1,.p2{
+    font-size: 20px; 
+    font-style: normal;
+    font-size: 20px;
+    font-style: normal;
+}
+/* align of afterimg div */
+.p2{
+    margin-left: 5px;
+}
+/* align of table */
+.tab2,.tab2 th,.tab2 td{
+    margin-left: 600px;
+    width: 600px;
+    padding: 15px;
+}
+input,textarea{
+    border: 1px black solid;
+        padding: 15px;
+}
+select{
+    width:195px;
+    border: 1px black solid;
+    padding: 10px;
+    
+}
+textarea{
+    width: 77%;
+    padding:30px ;
+}
+.inp{
+    background-color:#2fa5eb;
+    width: 90%;
+}
+.inp:hover{
+     background-color: deeppink;
+}
+/* appointment */
+h1{
+    text-align: center;
+    font-style: italic;
+}
+footer{
+    background-color:#2fa5eb;
+    height: 30px;
+}
+/* footer text */
+.div6{
+    background-color: black;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: white;
+   font-size: 15px;
+    padding: 5px;}
+                                      /* home page complete */
+     /* about page text */
+.p3{
+    font-size:30px ;
+    font-weight: bold;
+}
+/* img of about */
+img{
+    float: right;
+    width: 350px;
+    margin-right: 200px;
+}
+/* highlight of text */
+.sp{
+    background-color:rgb(242, 242, 2);   
+}
+/* text of about */
+.h{
+    font-weight: 900;
+    font-style: normal;
+    margin-left: 150px;
+}
+/* align of welcome */
+.d3{
+    margin-right: 300px;      
+}
+/* align of lorem in about */
+.p6{
+    font-style: normal;
+    font-size: 20px;
+    color: black;
+}
+/* tag based for list,address,contact*/
+h5{
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 150px;
+    padding: 0px;
+    color: grey;
+}
+/* div of list in about */
+.div8{
+    border-bottom:1px solid rgb(230, 226, 226);
+    width:100%;
+}
+/* lists in services */
+.div9,.div10{
+    margin-left: 120px;
+    padding-top:0% ;
+}
+/* headlines in services */
+.head{
+       font-size: 30px;
+       font-style:normal;
+       text-align: left;
+       font-weight: 500;
+}
+hr{
+    border:1px solid rgb(230, 226, 226);
+   margin-top: 120px; 
+}
+/* our heading in services */
+.head2{
+    bottom: 0px;
+    color: black;
+    font-style:normal ;
+    font-weight: 500;
+    font-size: 20px;
+}
+/* dots in services */
+ .dotp{
+    margin-left: 0px;
+} 
+/* align of dots & info in contact */
+.dop,.head3{
+    margin-left: 150px;
+}
+/* heading in contact */
+.head3{
+    font-size: 30px;
+    font-style:normal;
+    font-weight: 500;
+    text-align:left;
+}
+.word{
+    margin-left: 100px;
+    color: rgb(2, 101, 72);
+    text-decoration: underline;
+}
+.form{
+    margin-top: 20px;
+    border: 2px solid black;
+    margin-left: 400px;
+    margin-right: 400px;
+    background-color: rgb(172, 200, 252);
+}
+/* label{
+    margin-left: 20px;
+    font-size: 22px;
+    color: rgb(112, 9, 9);
+}
+input,textarea{
+    margin-left: 40px;
+    width: 300px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 2px;
+} */
+.sub{
+    margin-bottom: 20px;
+    width: 100px;
+    height: 50px;
+    font-size: 22px;
+}
+.sub:hover{
+  background-color: rgb(173, 171, 171);
+}
+.table,.table th,.table td{
+    border: 1px solid black;
+    border-spacing: 0;
+}
+.table th{
+    color: rgb(25, 1, 25);
+    background-color:rgb(163, 45, 65);
+    padding: 10px;
+    font-size: 22px;
+}
+.table td{
+    color: midnightblue;
+    background-color: rgb(252, 199, 207);
+    padding: 10px;
+}
+.p{
+    font-size: 30px;
+}
+.a:link{
+    text-decoration: none;
+    color: rgb(187, 21, 174);
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.a:hover{
+    text-decoration: underline;
+    color: rgb(52, 187, 63);
+}
+.but{
+    background-color: rgb(105, 152, 57);
+    color: white;
+    font-size: 18px;
+    border: 2px solid black;
+    width: 70px;
+}
+

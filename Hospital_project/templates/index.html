@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body >
+    <header>
+        <p class="headpara">
+            Contact Us +91 96366 20000/01 | mmahesh2183@gmail.com
+        </p>
+    </header>
+
+    <nav>
+        <table class="navtab">
+            <tr>
+                <th>
+                    <text style="font-family: forte;font-size: 50px;"><span>SUPER</span>&nbsp;
+                        Hospital</text></td>
+                <th style="vertical-align: bottom;">
+                    <a href="{{url_for('index')}}">HOME</a>
+                    <a href="{{url_for('about')}}">ABOUT US</a>
+                    <a href="{{url_for('service')}}">SERVICE</a>
+                    <a href="{{url_for('doctors')}}">DOCTORS</a>
+                    <a href="{{url_for('contact')}}">CONTACT US</a>
+                    <a href="{{url_for('appointment')}}">DASHBOARD</a> </td>
+            </tr>
+        </table>
+    </nav>
+    <hr class="stick">
+    <div class="indimg">
+        <a href="{{url_for('index')}}"></a>
+        <img class="stick" src="../static/pictures/a.jpg" alt="image">
+        
+        
+        <div class="imgtext">
+            <text>
+                <h1>Health Care Service</h1>
+                <p>We can take care Your health</p>
+            </text>
+            
+        </div>
+        
+    </div>
+<hr class="stick">
+    
+    
+    <div class="para">
+        <p>We are medical center</p>
+        <p style="font-size: larger;font-size: xx-large;">We Have medicare Plan Options for You! </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus tempora explicabo aliquid quisquam id
+            repellendus accusantium, ex expedita magni et. Ut quae expedita a veniam explicabo dolores amet molestiae
+            consequatur?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid quasi blanditiis asperiores, libero, nam
+            quas dolores impedit vel, rerum ipsa itaque? Quisquam tenetur quam maiores, esse itaque minima animi
+            dignissimos.</p>
+        <p>
+        <ul>
+            <li>Lorem ipsum dolor sit amet </li>
+            <li>consectetur adipisicing elit</li>
+            <li>Voluptatibus tempora explicabo</li>
+            <li>aliquid quisquam id repellendus</li>
+            <li>quisquam id repellendus accusantium</li>
+        </ul>
+        </p>
+    </div>
+    <hr>
+    <div class="appoin">
+        <h1 style="font-family: forte;">Make an Appointment</h1>
+        <form action="{{url_for('display')}}" method="POST">
+            <table class="apptab">
+                <tr>
+                    <td><label for="fname"></label><input id="fname" name="fname" type="text" placeholder="First Name"></td>
+                    <td><label for="lname"></label><input id="lname" name="lname" type="text" placeholder="Last Name"></td>
+                </tr>
+                <tr>
+                    <td><label for="email"></label><br><input id="email" name="email" type="email"  placeholder="Email Id"></td>
+                    <td><label for="mobile"></label><br> <input id="mobile" name="mobile"  type="number" placeholder="Mobile Number"></td>
+                </tr>
+                <tr>
+                    <td><label for="gender"></label><br> <select id="gender" name="gender" placeholder="Gender">
+                        <option>Male</option>
+                        <option>Female</option></td></select>
+                    <td><label for="date"></label><input id="date" name="date" type="text" placeholder="Appointment Date"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label for="comment"></label> <textarea type="text" id="comment" name="comment"></textarea></td>
+                 
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Submit" class="inp"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; super hospital,the site designed by mitraz</p>
+    </footer>
+</body>
+
+</html>

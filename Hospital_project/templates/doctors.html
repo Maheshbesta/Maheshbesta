@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>service</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body >
+    <header>
+        <p class="headpara">
+            Contact Us +91 96366 20000/01 | mmahesh2183@gmail.com
+        </p>
+    </header>
+
+    <nav>
+        <table class="navtab">
+            <tr>
+                <th>
+        <text style="font-family: forte;font-size: 50px;"><span>SUPER</span>&nbsp;
+            Hospital</text></td>
+        <th style="vertical-align: bottom;">
+            <a href="{{url_for('index')}}">HOME</a>
+            <a href="{{url_for('about')}}">ABOUT US</a>
+            <a href="{{url_for('service')}}">SERVICE</a>
+            <a href="{{url_for('doctors')}}">DOCTORS</a>
+            <a href="{{url_for('contact')}}">CONTACT US</a>
+            <a href="{{url_for('appointment')}}">DASHBOARD</a></td>
+    </tr>
+    </table>
+    
+    </nav>
+
+    </nav>
+    <hr>
+    <div class="doct">
+        <p>------------</p>
+        <h2>Information Not available</h2>
+    </div>
+    <footer>
+        <p>&copy; super hospital,the site designed by mitraz</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>about</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body >
+    <header>
+        <p class="headpara">
+        Contact Us +91 96366 20000/01 | mmahesh2183@gmail.com
+    </p>
+    </header>
+    
+    <nav>
+        <table class="navtab">
+            <tr>
+                <th>
+        <text style="font-family: forte;font-size: 50px;"><span>SUPER</span>&nbsp;
+            Hospital</text></td>
+        <th style="vertical-align: bottom;">
+            <a href="{{url_for('index')}}">HOME</a>
+            <a href="{{url_for('about')}}">ABOUT US</a>
+            <a href="{{url_for('service')}}">SERVICE</a>
+            <a href="{{url_for('doctors')}}">DOCTORS</a>
+            <a href="{{url_for('contact')}}">CONTACT US</a>
+            <a href="{{url_for('appointment')}}">DASHBOARD</a></td>
+    </tr>
+    </table>
+    
+    </nav><hr>
+    <div class="abtmain">
+       
+       
+        <div class="divpara">
+             <h4>Welcome to <text style="background-color: yellow;">SUPER Hospital</text></h4>
+            <h2>Best medical & Health care Needs to Our Patients</h3><br>
+            
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique dolores illo voluptas maiores architecto fuga, reiciendis animi ea suscipit labore aspernatur facilis asperiores dolore nostrum nesciunt veritatis eveniet! Animi, dolore.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, fugiat. A eos incidunt aut veniam ad animi ea placeat nihil inventore voluptatem iure fugiat nulla explicabo magnam molestias, eius earum!
+            </p>
+            <p>voluptas maiores architecto fuga, reiciendis animi ea suscipit labore aspernatur facilis asperiores dolore nostrum nesciunt veritatis eveniet! Animi, dolore.</p>
+        </div>
+        <div class="divimg2">
+            <img src="../static/pictures/about.jpg" class="img2">
+        </div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <div class="add">
+        <h3>Address</h3>
+        <h2>SUPER Hospital & Research center</h2>
+        <div class="line">
+       <p>180,Shri Rampuri,Niwaru Road,</p>
+       <p>kaal Road,</p>
+       <p>Benad,Bharatpur Raj 302020</p>
+       <p>Contact No-0123456789</p>
+       <p>Email:ukh@hospital.com</p>
+    </div>
+        </div>
+        <footer>
+            <p>&copy; super hospital,the site designed by mitraz</p>
+        </footer>
+</body>
+</html>
