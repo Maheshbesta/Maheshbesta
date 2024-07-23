@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      .gunmetal-container {
+        background-color: white;
+      }
+      .hero-section {
+        display: flex;
+        align-items: center;
+        padding-bottom: 80px;
+        width: 100%;
+        background-color: white;
+        flex-wrap: wrap;
+      }
+      .main-heading {
+        min-width: 50%;
+        padding: 0 20px;
+        color: #54a33c;
+      }
+      .main-heading p {
+        color: black;
+        font-size: 20px;
+      }
+      .hero-image {
+        width: 100%;
+        max-width: 300px;
+        /* object-fit: cover; */
+        border-radius: 20px;
+        margin-left: 100px;
+      }
+    </style>
+</head>
+<body>
+    <div class="gunmetal-container">
+        <div style="padding-top: 150px">
+            <!-- header -->
+            <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 15px 20px; position: fixed; top: 0; width: 100%; background-color: #bea12e; z-index: 9999;" class="navlinks">
+                <a href="{{ url_for('index') }}" class="links">
+                    <img src="{{ url_for('static', filename='images/sandy_2.jpg') }}" style="height: 100px; width: 170px" />
+                    <span style="color: greenyellow; font-size: 40px">Portfolio</span>
+                </a>
+                <nav style="color: rgb(219, 219, 219); display: flex; flex-direction: row; gap: 30px; font-size: 20px;">
+                    <a href="{{ url_for('Home') }}" class="links">HOME</a>
+                    
+                    <a href="{{ url_for('project_gallery') }}" class="links">Project_gallery</a>
+                    <a href="{{ url_for('resume') }}" class="links">Resume</a>
+                    <a href="{{ url_for('contactUs') }}" class="links">Contact Us</a>
+                </nav>
+            </div>
+
+            <h1>{{ project.title }}</h1>
+            <img src="{{ project.image_url }}" class="img-fluid" alt="{{ project.title }}">
+            <p>{{ project.description }}</p>
+            <p><strong>Technologies Used:</strong> {{ project.technologies }}</p>
+            <a href="{{ project.project_url }}" class="btn btn-primary">Live Project</a>
+            <a href="{{ project.source_url }}" class="btn btn-secondary">Source Code</a>
+        </div>
+    </div>
+</body>
+</html>

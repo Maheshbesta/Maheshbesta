@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="gunmetal-container">
+        <header style="padding-top: 100px;">
+            <!-- Header -->
+            <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; padding: 15px 20px; position: fixed; top: 0; width: 100%; background-color: #182554; z-index: 9999;" class="navlinks">
+                <a href="{{ url_for('index') }}" class="links">
+                    <img src="{{ url_for('static', filename='images/sandy_2.jpg') }}" style="height: 100px; width: 170px;">
+                    <span style="color: rgb(173, 255, 47); font-size: 40px;">Portfolio</span>
+                </a>
+                <nav style="color: rgb(219, 219, 219); display: flex; flex-direction: row; gap: 30px; font-size: 20px;">
+                    <a href="{{ url_for('Home') }}" class="links">HOME</a>
+                    <a href="{{ url_for('Aboutme') }}" class="links">About Me</a>
+                    <a href="{{ url_for('project_gallery') }}" class="links">Project Gallery</a>
+                    <a href="{{ url_for('resume') }}" class="links">Resume</a>
+                    <a href="{{ url_for('contactUs') }}" class="links">Contact Us</a>
+                </nav>
+            </div>
+        </header>
+        
+        <main style="padding-top: 150px;" align="center">
+            <div class="border">
+                <br>
+                <div class="header">
+                    <h1 class="word">Dashboard</h1>
+                </div>
+                <div class="msg">{{ msg }}</div>
+                <table class="table" style="border: 1px solid white; border-spacing: 0;">
+                    <thead class="table" style="border: 1px solid white;">
+                        <tr style="border: 1px solid white;">
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Project Name</th>
+                            <th>Technologies</th>
+                            <th>View</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody style="border: 1px solid white;">
+                        {% for i in data %}
+                        <tr style="border: 1px solid white;">
+                            <td>{{ i[0] }}</td>
+                            <td>{{ i[1] }}</td>
+                            <td>{{ i[2] }}</td>
+                            <td>{{ i[3] }}</td>
+                            <td><a href="{{ url_for('view_project', id=i[0]) }}" class="a">View</a></td>
+                            <td><a href="{{ url_for('update', id=i[0]) }}" class="a">Edit</a></td>
+                            <td><a href="{{ url_for('delete', id=i[0]) }}" class="a">Delete</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <p class="p">Click on link to redirect to home page <a href="{{ url_for('index') }}" class="a">Home Page</a></p>
+            </div>
+        </main>
+
+        <footer class="bg-body-tertiary text-center" style="background-color: #182554; color: white; padding-top: 15px;">
+            <div class="container p-4 pb-0">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+                    <!-- Twitter -->
+                    <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+                    <!-- Google -->
+                    <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i class="fab fa-google"></i></a>
+                    <!-- Instagram -->
+                    <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+                    <!-- LinkedIn -->
+                    <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+                    <!-- GitHub -->
+                    <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #333333;" href="#!" role="button"><i class="fab fa-github"></i></a>
+                    <p style="padding-top: 15px;">© 2020 Copyright:</p>
+                </section>
+                <!-- Section: Social media -->
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
